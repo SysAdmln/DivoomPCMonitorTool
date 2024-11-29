@@ -23,12 +23,13 @@ sudo apt install jq lm-sensors sysstat nvidia-smi
 
 ## Установка и запуск
 
-	1.	Скачайте или создайте скрипт
+###	1.	Скачайте или создайте скрипт
 Сохраните скрипт в файл, например, /root/divoom_mon.sh, и сделайте его исполняемым:
 ```bash
 chmod +x /root/divoom_mon.sh
 ```
-	2.	Создайте systemd сервис
+
+###	2.	Создайте systemd сервис
 Создайте файл сервиса:
 ```bash
 sudo nano /etc/systemd/system/divoom.service
@@ -50,7 +51,7 @@ WorkingDirectory=/root
 WantedBy=multi-user.target
 ```
 
-	3.	Активируйте и запустите сервис
+###	3.	Активируйте и запустите сервис
 Выполните следующие команды:
 
 ```bash
@@ -59,7 +60,7 @@ sudo systemctl enable divoom.service
 sudo systemctl start divoom.service
 ```
 
-4.	Проверьте статус сервиса
+###	4.	Проверьте статус сервиса
 Убедитесь, что скрипт работает:
 ```bash
 sudo systemctl status divoom.service
